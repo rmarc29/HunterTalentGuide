@@ -1,18 +1,17 @@
--- Create the main frame
 local HunterTalentGuide = CreateFrame("Frame", "HunterTalentGuide", UIParent)
-HunterTalentGuide:SetWidth(220)  -- Increased width for better spacing
+HunterTalentGuide:SetWidth(220)  
 HunterTalentGuide:SetHeight(250)
 HunterTalentGuide:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 HunterTalentGuide:SetBackdrop({
-    bgFile = "Interface/Tooltips/UI-Tooltip-Background",  -- Background texture
-    edgeFile = "Interface/Tooltips/UI-Tooltip-Border",    -- Border texture
-    tile = true,                                         -- Whether the background should tile
-    tileSize = 16,                                       -- Size of the tiles for the background
-    edgeSize = 16,                                       -- Size of the border
-    insets = { left = 4, right = 4, top = 4, bottom = 4 } -- Padding between the frame and the border
+    bgFile = "Interface/Tooltips/UI-Tooltip-Background",  
+    edgeFile = "Interface/Tooltips/UI-Tooltip-Border",    
+    tile = true,                                         
+    tileSize = 16,                                     
+    edgeSize = 16,                                       
+    insets = { left = 4, right = 4, top = 4, bottom = 4 } 
 })
-HunterTalentGuide:SetBackdropColor(0, 0, 0, 0.8)  -- Background color
-HunterTalentGuide:SetBackdropBorderColor(1, 1, 1, 1)  -- Border color (white)
+HunterTalentGuide:SetBackdropColor(0, 0, 0, 0.8)
+HunterTalentGuide:SetBackdropBorderColor(1, 1, 1, 1)  
 HunterTalentGuide:EnableMouse(true)
 HunterTalentGuide:SetMovable(true)
 HunterTalentGuide:RegisterForDrag("LeftButton")
@@ -74,7 +73,6 @@ local talentOrder = {
     [60] = {"Mortal Shots Rank 5", "Interface\\Icons\\ability_piercedamage"},
 }
 
--- Function to update talent display
 local function UpdateTalentDisplay()
     local level = UnitLevel("player")
     
@@ -85,39 +83,33 @@ local function UpdateTalentDisplay()
         if talentInfo then
             local talentName, iconPath = unpack(talentInfo)
             
-            -- Create or update frames dynamically
             if not HunterTalentGuide["Talent" .. i] then
                 local talentFrame = CreateFrame("Frame", nil, HunterTalentGuide)
                 talentFrame:SetWidth(190)
                 talentFrame:SetHeight(30)
                 talentFrame:SetPoint("TOP", HunterTalentGuide, "TOP", 0, -((i - 1) * 35))
 
-                -- Level Text ("lvl X :")
                 local levelText = talentFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
                 levelText:SetPoint("LEFT", talentFrame, "LEFT", 5, -20)
                 levelText:SetText("lvl " .. talentLevel .. " :")
 
-                -- Icon
                 local icon = talentFrame:CreateTexture(nil, "ARTWORK")
                 icon:SetWidth(30)
                 icon:SetHeight(30)
                 icon:SetPoint("LEFT", levelText, "RIGHT", 5, -5)
                 icon:SetTexture(iconPath)
 
-                -- Talent Name
                 local text = talentFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-                text:SetPoint("LEFT", icon, "RIGHT", 8, 0)  -- Adjusted for better spacing
-                text:SetWidth(120)  -- Prevents text from getting cut off
+                text:SetPoint("LEFT", icon, "RIGHT", 8, 0)  
+                text:SetWidth(120)  
                 text:SetJustifyH("LEFT")
                 text:SetText(talentName)
 
-                -- Store the elements
                 talentFrame.levelText = levelText
                 talentFrame.icon = icon
                 talentFrame.text = text
                 HunterTalentGuide["Talent" .. i] = talentFrame
             else
-                -- Update existing elements
                 local talentFrame = HunterTalentGuide["Talent" .. i]
                 talentFrame.levelText:SetText("lvl " .. talentLevel .. " :")
                 talentFrame.icon:SetTexture(iconPath)
