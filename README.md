@@ -6,4 +6,4 @@ Based on wowhead's hardcored hunter guide : https://www.wowhead.com/classic/guid
 ## Future
 I'll try to create all the other classes guides soon enough, I'll link everything down here
 
----Feel free to fork and modify stuff around
+-- Feel free to fork and modify stuff around
