@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: Hunter Talent Guide
+## Notes: Guide for hunter talent upgrades
+## Author: rmarc29 (aka TNS)
+## Version: 0.0.1
+
+HunterTalentGuide.lua
