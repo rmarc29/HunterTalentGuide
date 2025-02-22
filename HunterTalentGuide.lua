@@ -1,6 +1,6 @@
 local HunterTalentGuide = CreateFrame("Frame", "HunterTalentGuide", UIParent)
 HunterTalentGuide:SetWidth(220)  
-HunterTalentGuide:SetHeight(250)
+HunterTalentGuide:SetHeight(160)
 HunterTalentGuide:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 HunterTalentGuide:SetBackdrop({
     bgFile = "Interface/Tooltips/UI-Tooltip-Background",  
@@ -76,7 +76,7 @@ local talentOrder = {
 local function UpdateTalentDisplay()
     local level = UnitLevel("player")
     
-    for i = 1, 6 do
+    for i = 1, 3 do
         local talentLevel = level + (i - 1)
         local talentInfo = talentOrder[talentLevel]
         
