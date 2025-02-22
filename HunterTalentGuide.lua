@@ -90,7 +90,7 @@ local function UpdateTalentDisplay()
                 talentFrame:SetPoint("TOP", HunterTalentGuide, "TOP", 0, -((i - 1) * 35))
 
                 local levelText = talentFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-                levelText:SetPoint("LEFT", talentFrame, "LEFT", 5, -20)
+                levelText:SetPoint("LEFT", talentFrame, "LEFT", 0, -20)
                 levelText:SetText("lvl " .. talentLevel .. " :")
 
                 local icon = talentFrame:CreateTexture(nil, "ARTWORK")
