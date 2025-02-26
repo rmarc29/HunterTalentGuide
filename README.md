@@ -1,4 +1,4 @@
-# HunterTalentGuide
+# HunterTalentGuide DEPRECATED !!! Use [Unified-Talent-Guides](https://github.com/rmarc29/Unified-Talent-Guides)
 ## Info
 This is an AddOn for World of Warcraft Vanilla (v.1.12), that will show hunter players what talent to choose. 
 Based on wowhead's hardcore hunter guide : https://www.wowhead.com/classic/guide/classes/hunter/hardcore-leveling-tips#leveling-tips
