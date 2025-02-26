@@ -10,7 +10,7 @@ Based on wowhead's hardcore hunter guide : https://www.wowhead.com/classic/guide
 I'll try to create all the other classes guides soon enough, I'll link everything down here :
 - [Warrior Guide](https://github.com/rmarc29/WarriorTalentGuide) 
 - [Druid Guide](https://github.com/rmarc29/DruidTalentGuide) 
-
+- [Warlock Guide](https://github.com/rmarc29/WarlockTalentGuide) 
 At the end my project is to try to create a single AddOn that will track which class you play so you won't have to constantly switch between them.
 
 -- Feel free to fork and modify stuff around
